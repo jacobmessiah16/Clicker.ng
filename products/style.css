@@ -521,29 +521,95 @@ font-size: 18px;
     }
   }
 
-/* Mobile Responsiveness for the Modal */
+  
+  /* Modal Style */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 1vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.modal ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.modal ul li {
+  list-style: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.modal ul li i {
+  color: #007BFF;
+  margin-right: 10px;
+}
+
+.purchasebtn {
+  background-color: #007BFF;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  height: 35px;
+  border-radius: 0.5vh;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Responsive Style for Mobile */
 @media (max-width: 768px) {
-    .modal-content {
-        width: 80%; /* Take up more width on smaller screens */
-    }
+  .modal {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .modal h2 {
+    font-size: 18px;
+  }
+
+  .modal ul li {
+    font-size: 13px;
+  }
+
+  .purchasebtn {
+    width: 100%;
+    height: 40px;
+  }
+
+  .close {
+    font-size: 18px;
+  }
 }
-
-@media (max-width: 480px) {
-    .modal-content {
-        width: 90%; /* Further decrease width on very small screens */
-        margin: 10% auto; /* Adjust margin for better centering */
-    }
-
-    .close {
-        font-size: 24px; /* Make close button smaller on small screens */
-    }
-
-    .purchasebtn {
-        padding: 12px; /* Make the button more clickable on small screens */
-    }
-}
-  /* Animation for Camera*/
-
 
 
 
@@ -781,117 +847,3 @@ footer p {
   }
 }
 
-<style>
-/* Base modal styling */
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 999; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.6); 
-    transition: all 0.3s ease-in-out;
-}
-
-/* Modal content box */
-.modal-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 15px;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    position: relative;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Close button */
-.close {
-    color: #aaa;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.2s;
-}
-
-.close:hover {
-    color: #000;
-}
-
-/* List styling */
-.modal-content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.modal-content ul li {
-    margin-bottom: 10px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-}
-
-.modal-content ul li i {
-    color: #007BFF;
-    margin-right: 10px;
-}
-
-/* CTA button */
-.purchasebtn {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-    display: block;
-    margin: 20px auto 0;
-}
-
-.purchasebtn:hover {
-    background-color: #0056b3;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(-20px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
-/* Responsive adjustments */
-@media (max-width: 480px) {
-    .modal-content {
-        width: 95%;
-        margin: 20% auto;
-        padding: 15px;
-    }
-
-    .modal-content h2 {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .modal-content ul li {
-        font-size: 14px;
-    }
-
-    .purchasebtn {
-        font-size: 14px;
-        padding: 10px 16px;
-    }
-
-    .close {
-        font-size: 24px;
-        right: 10px;
-    }
-}
-</style>
