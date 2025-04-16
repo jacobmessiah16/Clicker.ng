@@ -581,17 +581,20 @@ font-size: 18px;
     }
 
     .camera-image{
-      width: 75%;
+      width: 50%;
       height: 350px;
       margin-top: 35px;
     }
 
-    .camera-section {
-      direction: rtl;
-    }
-    .camera-section > * {
-      direction: ltr; /* so text isn't reversed */
-    }
+
+.image-placeholder {
+  width: 70%;
+}
+
+.image-placeholder img{
+width: 100%;;
+}
+
     
 
 
