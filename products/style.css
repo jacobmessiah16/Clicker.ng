@@ -557,6 +557,8 @@ font-size: 18px;
 
 
 
+  
+
 
 
 
@@ -577,6 +579,21 @@ font-size: 18px;
     header ul {
         display: none;
     }
+
+    .camera-image{
+      width: 75%;
+      height: 350px;
+      margin-top: 35px;
+    }
+
+    .camera-section {
+      direction: rtl;
+    }
+    .camera-section > * {
+      direction: ltr; /* so text isn't reversed */
+    }
+    
+
 
     @media (max-width: 768px) {
         .modal-content {
