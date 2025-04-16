@@ -712,3 +712,51 @@ footer p {
       font-size: 1rem;
   }
 }
+
+
+/* Mobile Responsive Styling -----------------------------------------*/
+.menu-toggle{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007BFF;
+    margin-left: auto;
+    margin-right: 15px;
+  
+  }
+
+  header ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    display: none;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+
+  header ul.active {
+    display: flex;
+  }
+
+  .button {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  header button {
+    margin: 5px 0;
+  }
+}

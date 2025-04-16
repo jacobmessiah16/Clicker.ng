@@ -34,3 +34,11 @@ window.addEventListener('click', function (event) {
         event.target.style.display = 'none';
     }
 });
+
+
+
+//Hamber------------------------------------------
+
+function toggleMenu() {
+    document.querySelector('header ul').classList.toggle('active');
+  }
